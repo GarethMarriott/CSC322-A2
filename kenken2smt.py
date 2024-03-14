@@ -1,36 +1,21 @@
 import fileinput
-# from pprint import pp
+from pprint import pp
 
-
-# def convert_grid_to_val(i,j,num):
-#     return (81*(i-1))+(9*(j-1))+(num-1)+1
-
-def convert_val_to_grid(num):
-    num = int(num)-1
-    i = int(num / 81)+1
-    j = int(num / 9)+1
-    val = (num % 9)+1
-    return (i,j,val)
-
-sat = ""
+kenken = ""
 for line in fileinput.input():
-    sat += line.replace("\n"," ")
-sat = sat.split(" ")
-# pp(sat)
+    kenken += line
 
-sud = ""
-for clause in sat:
-    try:
-        c = int(clause)
-        if c > 0:
-            sud += str(convert_val_to_grid(int(clause))[2])
-    except ValueError:
-        pass
+pp(kenken)
 
-for i,char in enumerate(sud):
-    if i%3 == 0:
-        print(" ",end="")
-    if i%9 == 0:
-        print()
-    print(char,end="")
-print()
+# (set-logic UFNIA)
+# (set-option :produce-models true)
+# (set-option :produce-assignments true)
+# (declare-const V0 Int)
+# (declare-const V1 Int)
+# (declare-const V2 Int)
+
+smt = ""
+smt += "(set-logic UFNIA)\n"
+smt += "(set-option :produce-models true)\n"
+smt += "(set-option :produce-assignments true)\n"
+
