@@ -1,5 +1,5 @@
 import fileinput
-from pprint import pp
+# from pprint import pp
 import re
 import itertools
 
@@ -88,6 +88,9 @@ for key,val in conds_dict.items():
         case "+":
             cond_str += f"(= {key[1]} "
             cond_str += f"{get_nex_plus(val)}))\n"
+        case "*":
+            cond_str += f"(= {key[1]} "
+            cond_str += f"{get_nex_mult(val)}))\n"
     smt += cond_str
     
 smt += "(check-sat)\n"

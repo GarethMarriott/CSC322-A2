@@ -1,5 +1,5 @@
 # import fileinput
-from pprint import pp
+# from pprint import pp
 import sys
 
 smt = ""
@@ -30,13 +30,17 @@ stats = list(map(lambda x: x.replace(":","").split(" ")[1:] ,stats.split("\n")[2
 
 stats = {sub[0]:sub[1] for sub in stats}
 
-labeled_stats = {sys.argv[2]:stats}
+# labeled_stats = {sys.argv[2]:stats}
 
+# print(stats['time-seconds'])
+# print(stats['memory-mb'])
 # FOR TESTING ONLY
-# pp(labeled_stats) 
+# pp(labeled_stats)
 
 f = open(sys.argv[2], "a")
-f.write(str(labeled_stats))
+f.write(str(stats['time-seconds'])+","+str(stats['memory-mb']))
+# f.write(str(stats['memory-mb']))
+f.write("\n")
 f.close()
 
 # FOR ref ONLY

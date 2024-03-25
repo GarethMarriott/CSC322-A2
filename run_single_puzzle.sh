@@ -1,4 +1,4 @@
 #!/bin/bash
-python3 kenken2smt.py <${1} >puz.smt
-./mathsat -stats <puz.smt >model.smt
-python3 smt2kenken.py <model.smt >result.txt
+python3 kenken2smt.py <${1} >tmp/puz.smt
+./mathsat -stats <tmp/puz.smt >tmp/model.smt
+python3 smt2kenken.py tmp/model.smt tmp/stats.txt >tmp/result.txt
