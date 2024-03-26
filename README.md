@@ -1,4 +1,4 @@
-TO RUN THE BASIC TASK
+TO RUN THE BASIC TASK RESULT in tmp/result.txt
 
 bash ./run_single_puzzle.sh {path/to/puzzle}
 

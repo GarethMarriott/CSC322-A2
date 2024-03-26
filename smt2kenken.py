@@ -1,3 +1,5 @@
+# USAGE example: python3 smt2kenken.py tmp/model.smt tmp/stats.txt >tmp/result.txt
+#             OR python3 smt2kenken.py tmp/model.smt tmp/stats.txt >tmp/result.txt --pretty
 # import fileinput
 # from pprint import pp
 import sys

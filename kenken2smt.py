@@ -1,3 +1,5 @@
+# USAGE ex: python3 kenken2smt.py <{path/to/puzzle} >tmp/puz.smt
+
 import fileinput
 # from pprint import pp
 import re
