@@ -1,3 +1,7 @@
+SOLO PROJECT:
+Gareth Marriott - V00875748
+
+
 TO RUN THE BASIC TASK RESULT in tmp/result.txt
 
 bash ./run_single_puzzle.sh {path/to/puzzle}
